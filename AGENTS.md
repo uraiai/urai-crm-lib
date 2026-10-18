@@ -48,6 +48,15 @@ imports resolve to this local checkout (via that project's `urai.toml`).
 
 ## Files
 
-- `index.ts` — the library source (edit this).
+- `index.ts` — the library's exports (CRM reads/writes + `show*` helpers).
+- `client.ts` — the HTTP client: bearer `meta.vars.session_token` against
+  `meta.vars.crm_api_url`; throws `CrmError` with the API's message.
+- `types.ts` — CRM enums and record types, mirroring `app/lib/*` in the CRM
+  repo. Keep them in sync.
+- `ui.ts` — `sendCommand` helpers the CRM page understands (displayComponent,
+  navigate, refresh). The page validates these in `app/lib/assistant.ts`.
+- `AGENT.md` — the reference injected into the agent's prompt. Update it with
+  every export change.
+- `prompts/agent.md` — the agent's instructions; paste into the Urai console.
 - `urai.d.ts` / `tsconfig.json` — editor types (generated; `uraijs types`).
 - `urai.toml` — project manifest.
