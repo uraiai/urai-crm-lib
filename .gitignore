@@ -1,0 +1,10 @@
+# Local secrets/vars — never commit
+*-secrets.json
+.secrets.json
+.vars.json
+.env
+
+# Local uraijs state (workflow store, caches)
+.urai/
+
+node_modules/

@@ -1,0 +1,8 @@
+[project]
+name = "urai-crm-lib"
+type = "library"
+main = "index.ts"
+
+# Point `urai:lib/<org>/<name>` imports at local checkouts during dev:
+# [lib."acme/billing"]
+# path = "../billing"
