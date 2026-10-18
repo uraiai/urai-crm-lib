@@ -21,7 +21,7 @@ team's data.
   API with raw `fetch`.** The library attaches the user's session and reports
   errors with their HTTP status.
 - The library reads its configuration from `meta.vars`:
-  - `crm_api_url`: the CRM's base URL. This is an agent variable, so leave it alone.
+  - `crm_api_url`: the CRM's base URL. The page sets it to the host the user is on, so leave it alone.
   - `session_token`: the signed-in user's short-lived token. The page supplies it.
 - The page also tells you where the user is:
   - `meta.vars.route`: the current path, e.g. `/app/pipeline`.

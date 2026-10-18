@@ -50,7 +50,8 @@ imports resolve to this local checkout (via that project's `urai.toml`).
 
 - `index.ts` — the library's exports (CRM reads/writes + `show*` helpers).
 - `client.ts` — the HTTP client: bearer `meta.vars.session_token` against
-  `meta.vars.crm_api_url`; throws `CrmError` with the API's message.
+  `meta.vars.crm_api_url` (both set by the CRM page — the URL is the host the
+  user is on); throws `CrmError` with the API's message.
 - `types.ts` — CRM enums and record types, mirroring `app/lib/*` in the CRM
   repo. Keep them in sync.
 - `ui.ts` — `sendCommand` helpers the CRM page understands (displayComponent,

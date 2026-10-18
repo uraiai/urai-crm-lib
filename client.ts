@@ -19,7 +19,7 @@ export class CrmError extends Error {
 function baseUrl(): string {
   const raw = meta.vars?.crm_api_url;
   if (typeof raw !== "string" || !raw) {
-    throw new Error("crm_api_url is not set. Add it as an agent variable (e.g. https://crm.example.com).");
+    throw new Error("crm_api_url is not set. The CRM page passes it; ask the user to reopen the assistant panel.");
   }
   const url = new URL(raw);
   const local = url.hostname === "localhost" || url.hostname === "127.0.0.1";
